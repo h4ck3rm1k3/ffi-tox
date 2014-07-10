@@ -12,7 +12,7 @@ module Tox
 %}
 
 /* Parse the header file to generate wrappers */
-%include "../ProjectTox-Core/core/Messenger.h"
+%include "../libtoxcore-0.001/toxcore/Messenger.h"
 
 %{
         end
