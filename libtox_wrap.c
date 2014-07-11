@@ -2978,15 +2978,7 @@ static swig_module_info swig_module = {swig_types, 35, 0, 0, 0, 0};
 #define SWIG_as_voidptrptr(a) ((void)SWIG_as_voidptr(*a),(void**)(a)) 
 
 
-require 'ffi'
-module Tox
-        module Messenger
-                extend FFI::Library
-                ffi_lib File.absolute_path(File.join(__FILE__,"../../../ext/ffi-tox/libtox.so"))
-                uint16_t = :uint16
-                uint32_t = :uint32
-                attach_variable 'self_public_key', FFI::ArrayType.new(FFI::TYPE_UINT8,32)
-                attach_function 'getnumfriends', [], :int
+#include "toxcore/Messenger.h"
 
 
 SWIGINTERNINLINE PyObject*
@@ -3151,10 +3143,6 @@ typedef struct {
   void *object;
 } Friend_lossless_packethandlers;
 
-
-
-        end
-end
 
 #ifdef __cplusplus
 extern "C" {
