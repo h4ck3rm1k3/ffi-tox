@@ -1,1 +1,1 @@
-import interfaces.tox
+import tox
