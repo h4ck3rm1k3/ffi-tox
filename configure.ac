@@ -1,7 +1,7 @@
 # Autoconf file. Run ./autogen.sh to generate configure, etc.
 
 # typical init
-AC_INIT([SwigExample],[0.0.1])
+AC_INIT([LibToxPython],[0.0.1])
 
 # foreign: non-GNU, don't check for NEWS, AUTHORS, etc.
 AM_INIT_AUTOMAKE([foreign no-define])
@@ -18,7 +18,7 @@ AX_PYTHON_DEVEL
 
 # Find swig executable
 # http://www.gnu.org/software/autoconf-archive/ax_pkg_swig.html
-AX_PKG_SWIG([], [], [ ])
+AX_PKG_SWIG([], [], [AC_MSG_ERROR([SWIG is required to build..])])
 
 # Get SWIGFLAGS, CPPFLAGS, etc., for Python generation by swig
 # http://www.gnu.org/software/autoconf-archive/ax_swig_python.html
