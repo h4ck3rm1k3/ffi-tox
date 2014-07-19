@@ -9,7 +9,7 @@ lib_LTLIBRARIES = libtoximpython.la
 libtoximpython_la_SOURCES = libtox_wrap.c 
 
 # link to another library
-libtoximpython_la_LIBADD = -ltoxcore -lsodium
+libtoximpython_la_LIBADD = -ltoxcore -lsodium -ltoxdns 
 
 ## This is the Python module interfacing to libtoximpython
 
